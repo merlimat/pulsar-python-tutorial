@@ -11,11 +11,10 @@ tags:
 
 # Getting started with Pulsar in Python
 
-In this tutorial, we will create 2 Python scripts that can send and receive
+In this tutorial, we will create two Python scripts that can send and receive
 messages through a [Pulsar](https://pulsar.incubator.apache.org/) topic.
 
-We will start a local Pulsar cluster, use Maven to build an application that uses the Pulsar API and
-test it out on the live cluster.
+We will start a local Pulsar cluster and test the scripts in a live cluster.
 
 ## Start Pulsar standalone
 
@@ -23,8 +22,8 @@ A very convenient way to start playing with Pulsar is to start a standalone serv
 a complete Pulsar-cluster in a single JVM instance.
 
 There are few ways to get a Pulsar standalone cluster up and running:
- * Regular binary releases: [Local cluster documentation](https://pulsar.incubator.apache.org/docs/latest/getting-started/LocalCluster/)
- * Starting through Docker: [Pulsar in Docker](https://pulsar.incubator.apache.org/docs/latest/getting-started/docker/)
+ * Using binary releases: [Local cluster documentation](https://pulsar.incubator.apache.org/docs/latest/getting-started/LocalCluster/)
+ * Using Docker: [Pulsar in Docker](https://pulsar.incubator.apache.org/docs/latest/getting-started/docker/)
 
 If you are in MacOS, you can even use [Homebrew](https://brew.sh/) to install a local Pulsar cluster
 for testing purposes:
@@ -62,7 +61,7 @@ $ git clone https://github.com/streamlio/pulsar-python-tutorial.git
 ```
 
 This command creates a directory named `pulsar-python-tutorial` at the current location, which contains
-the tutorial basic Pulsar client Java project that you can build using Maven. The `pulsar-java-tutorial` directory
+the tutorial basic Pulsar client Python project. The `pulsar-python-tutorial` directory
 contains the following items:
 
 File or directory | Description
@@ -118,9 +117,7 @@ python consumer_tutorial.py
 ## Producer
 
 The next step is to start the producer. In this example, we will start ingesting sample data into
-a topic where the consumer has already created a subscription.
-
-The producer code is available at [producer_tutorial.py](producer_tutorial.py):
+a topic where the consumer has already created a subscription.The producer code is available at [producer_tutorial.py](producer_tutorial.py):
 
 ```python
 import pulsar
@@ -149,8 +146,7 @@ You can start the producer with:
 python producer_tutorial.py
 ```
 
-
-At this point you should see the consumer to start receiving the published test messages.
+At this point you should see the consumer to start receiving the published sample messages.
 
 You can find more documentation for Pulsar Python client at https://pulsar.incubator.apache.org/docs/latest/clients/Python/
  and the complete API reference at https://pulsar.incubator.apache.org/api/python/.
